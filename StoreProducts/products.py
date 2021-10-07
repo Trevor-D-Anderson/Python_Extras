@@ -1,5 +1,5 @@
 class Products:
-    def __init__(self, name, price, category):
+    def __init__(self, name, price = 0, category = ""):
         self.name = name
         self.price = price
         self.category = category
@@ -9,10 +9,8 @@ class Products:
             self.price += self.price*percentage_change
         else:
             self.price -= self.price*percentage_change
+        return self
 
     def print_info(self):
         print(f"Product: {self.name} \nCategory: {self.category} \nPrice: ${self.price:.2f}")
-
-eggs = Products("Eggs", 3.50, "Dairy")
-eggs.update_price(.2, False)
-eggs.print_info()
+        return self

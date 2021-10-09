@@ -13,4 +13,5 @@ class Products:
 
     def print_info(self):
         print(f"Product: {self.name} \nCategory: {self.category} \nPrice: ${self.price:.2f}")
+        # print(self.name, self.price, self.category)
         return self

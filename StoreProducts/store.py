@@ -12,11 +12,11 @@ class Store:
         self.products.append(new_product)
 
     def sell_product(self, id):
-        print(market.products[id].print_info())
+        market.products[id].print_info()
         market.products.pop(id)
 
 market = Store("Bargain Market")
 market.add_product("Eggs")
 market.add_product("Steak")
 market.sell_product(0)
-print(market.products[0].name)
+market.products[0].print_info()
